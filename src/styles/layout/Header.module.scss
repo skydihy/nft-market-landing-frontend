@@ -1,0 +1,23 @@
+.navContainer {
+  @apply w-full top-0 flex justify-between items-center;
+
+  height: 117px;
+  z-index: 100;
+  padding: 0 48px;
+
+  .menus {
+    @apply flex flex-row gap-16;
+
+    a {
+      @apply cursor-pointer text-grey-100 font-sora;
+
+      font-size: 1rem;
+    }
+  }
+}
+
+@screen ipad {
+  .navContainer {
+    @apply hidden;
+  }
+}

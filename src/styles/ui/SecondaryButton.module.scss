@@ -1,0 +1,15 @@
+.secondaryContainer {
+  @apply font-sora text-grey-100 cursor-pointer text-center  font-semibold;
+
+  padding: 16px 24px;
+  font-size: 1rem;
+  border: 2px solid #7780a1;
+  box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
+    inset 4px 4px 4px rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.secondaryDisabled {
+  cursor: not-allowed !important;
+  opacity: 0.4;
+}

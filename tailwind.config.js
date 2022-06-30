@@ -17,6 +17,10 @@ module.exports = {
       },
       screens: {
         desktop: { max: "1392px" },
+        ipad: { max: "976px" },
+        mobile: { max: "768px" },
+        smobile: { max: "640px" },
+        xsmobile: { max: "460px" },
       },
       fontFamily: {
         sora: "Sora",
