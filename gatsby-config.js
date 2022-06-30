@@ -24,7 +24,14 @@ module.exports = {
         root: path.join(__dirname, "src"),
       },
     },
-
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     "gatsby-plugin-postcss",
   ],
 };

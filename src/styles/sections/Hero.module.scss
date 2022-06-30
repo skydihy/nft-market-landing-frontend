@@ -2,14 +2,14 @@
   @apply w-full h-screen relative;
 
   .backgroundWrapper {
-    @apply absolute inset-0;
+    @apply absolute inset-0 flex items-center justify-center;
 
     z-index: -1;
 
     .squares {
-      @apply absolute w-full h-full flex justify-center items-center;
+      @apply absolute w-full h-full;
 
-      z-index: 4;
+      z-index: 5;
       animation: shine 3s infinite ease-in-out;
 
       div {
@@ -17,8 +17,16 @@
       }
     }
 
+    .blurLayer {
+      @apply absolute w-full h-full;
+
+      z-index: 4;
+      max-height: 860px;
+      filter: blur(250px);
+    }
+
     .littleCircles {
-      @apply absolute w-full h-full flex justify-center items-center;
+      @apply absolute w-full h-full;
 
       z-index: 3;
 
@@ -64,6 +72,18 @@
       margin-top: 2.12rem;
       font-size: 7.5rem;
       line-height: 7.5rem;
+
+      .firstRow,
+      .ndRow {
+        @apply flex items-center;
+      }
+
+      .firstRow {
+        transform: translateX(-2rem);
+      }
+      .ndRow {
+        transform: translateX(3.8rem);
+      }
     }
 
     .subTitleBottom {
@@ -71,13 +91,61 @@
     }
 
     .inputContainer {
-      @apply w-full;
+      @apply w-full relative;
 
       margin-top: 3.4375rem;
       max-width: 643px;
 
       > input {
         @apply w-full;
+      }
+
+      .selector {
+        @apply absolute w-full flex flex-row font-inter font-normal;
+
+        top: 50%;
+        left: 58.9%;
+        transform: translate(0, -50%);
+        width: 162px;
+        border-left: 1px solid rgba(38, 40, 64, 0.25);
+
+        .placeholder {
+          @apply flex flex-row w-full items-center pl-4 gap-16 cursor-pointer;
+
+          .arrowDown {
+            @apply absolute right-0;
+          }
+        }
+
+        .selectorItemList {
+          @apply absolute w-full flex flex-col bg-white gap-6;
+
+          top: 32px;
+          box-shadow: 0px 8px 16px rgba(6, 7, 20, 0.1);
+          border-radius: 16px;
+          padding: 24px 0;
+
+          > li {
+            @apply cursor-pointer w-full;
+
+            padding: 0 16px 0 16px;
+            transition: 0.2s;
+
+            &:hover {
+              @apply text-grey-100;
+
+              transition: 0.2s;
+            }
+          }
+        }
+      }
+
+      .btnSearch {
+        @apply absolute ml-12 cursor-pointer;
+
+        top: 50%;
+        right: 32px;
+        transform: translate(0, -50%);
       }
     }
   }
