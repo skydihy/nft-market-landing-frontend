@@ -1,5 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { useClickAway } from "react-use";
 
 // Assets
 import Vector1 from "assets/svg/hero-vec1.svg";
@@ -17,6 +18,11 @@ const HeroSection = () => {
     setCurrentCategory(category);
     setShowSelector(false);
   }
+
+  const searchFieldRef = React.useRef(null);
+  useClickAway(searchFieldRef, () => {
+    setShowSelector(false);
+  });
 
   return (
     <div className={styles.sectionWrapper}>
@@ -46,6 +52,7 @@ const HeroSection = () => {
           src="../../../images/sections/hero/circles-bg.png"
           alt="Orbital circle background"
           objectFit="cover"
+          quality={90}
         />
       </div>
       <div className={styles.heroContainer}>
@@ -66,7 +73,7 @@ const HeroSection = () => {
         </p>
         <p className={styles.subTitleBottom}>Discover, collect and sell</p>
         <div className={styles.inputContainer}>
-          <div className={styles.selector}>
+          <div className={styles.selector} ref={searchFieldRef}>
             <div
               className={styles.placeholder}
               onClick={() => setShowSelector((prev) => !prev)}
