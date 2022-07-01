@@ -1,0 +1,14 @@
+.aunctionPageWrapper {
+  @apply pt-16;
+
+  .aunctionContainer {
+    @apply flex flex-col w-full items-center;
+
+    .aunctionHorizontal {
+      @apply flex flex-row;
+
+      gap: 24px;
+      margin-top: 72px;
+    }
+  }
+}

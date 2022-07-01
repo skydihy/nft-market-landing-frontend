@@ -19,6 +19,15 @@ module.exports = {
         path: "./src/images/",
       },
     },
+    "gatsby-transformer-remark",
+    "gatsby-remark-images",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "constants",
+        path: "./src/constants/",
+      },
+    },
     {
       resolve: "gatsby-plugin-root-import",
       options: {

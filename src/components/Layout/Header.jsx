@@ -1,18 +1,20 @@
 import * as React from "react";
 
-import * as styles from "styles/layout/Header.module.scss";
-
 // Components
 import PrimaryButton from "../UI/Buttons/PrimaryButton";
 import SecondaryButton from "../UI/Buttons/SecondaryButton";
+import ThemeToggle from "./ThemeToggle";
 
 // Assets
 import NftMarketLogo from "assets/svg/nft-market-logo.svg";
+
+import * as styles from "styles/layout/Header.module.scss";
 
 const Header = () => {
   return (
     <nav className={styles.navContainer}>
       <NftMarketLogo />
+
       <div className={styles.menus}>
         <a>Aunctions</a>
         <a>Roadmap</a>
