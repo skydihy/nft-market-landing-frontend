@@ -17,7 +17,7 @@ const NftCard = ({
     name,
     prices,
     remainingTimes,
-    peopleBinding,
+    peopleBidding,
     poepleLikes,
     liked,
     imgPath,
@@ -51,29 +51,29 @@ const NftCard = ({
           <span>min left</span>
         </p>
       </div>
-      <div className={styles.binding}>
-        {showProfile && profileCoverPathList ? (
-          <div style={{ marginLeft: "16px" }}>
-            {profileCoverPathList.map((path, idx) => (
-              <div
-                key={idx}
-                style={{
-                  display: "inline-block",
-                  borderRadius: "50%",
-                  border: "4px solid #FFF",
-                  marginLeft: "-16px",
-                }}
-              >
-                <GatsbyImage image={getImage(path)} alt="profile" />
-              </div>
-            ))}
-          </div>
-        ) : null}
+      <div className={styles.bidding}>
+        <div className="flex items-center">
+          {showProfile && profileCoverPathList ? (
+            <div style={{ marginLeft: "8px" }}>
+              {profileCoverPathList.map((path, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    display: "inline-block",
+                    borderRadius: "50%",
+                    border: "4px solid #FFF",
+                    marginLeft: "-16px",
+                  }}
+                >
+                  <GatsbyImage image={getImage(path)} alt="profile" />
+                </div>
+              ))}
+            </div>
+          ) : null}
 
-        <div>
-          <p>
-            {parseInt(peopleBinding)}
-            <span className="ml-2">people are bidding</span>
+          <p className={`inline-block ${showProfile ? "ml-[8px]" : ""}`}>
+            {parseInt(peopleBidding)}
+            <span className="ml-[4px]">people are bidding</span>
           </p>
         </div>
         <div className="flex gap-2">

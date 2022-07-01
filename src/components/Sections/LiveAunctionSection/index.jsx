@@ -28,7 +28,7 @@ const LiveAunctionSection = () => {
               }
               name
               liked
-              peopleBinding
+              peopleBidding
               poepleLikes
               prices
               remainingTimes
@@ -93,7 +93,7 @@ const LiveAunctionSection = () => {
         />
       </SwiperSlide>
     ));
-  }, []);
+  }, [LiveAunctionSection]);
 
   return (
     <div className={styles.aunctionPageWrapper}>
