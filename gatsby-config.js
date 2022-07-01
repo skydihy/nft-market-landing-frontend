@@ -2,8 +2,10 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: `landing-nft-market`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Nft Market | Landing`,
+    siteUrl: `http://localhost:8000/`,
+    description:
+      "A new NFT experience | Non Fungible Tokens, Discover | collect and sell",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -16,7 +18,6 @@ module.exports = {
         name: "images",
         path: "./src/images/",
       },
-      __key: "images",
     },
     {
       resolve: "gatsby-plugin-root-import",
@@ -32,6 +33,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-dark-mode",
     "gatsby-plugin-postcss",
   ],
 };
