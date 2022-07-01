@@ -9,6 +9,13 @@ liveAunctionList:
       poepleLikes: 54,
       liked: true,
       imgPath: "../images/sections/aunctions/live1.png",
+      profileCoverPathList:
+        [
+          "../images/sections/aunctions/profile2.png",
+          "../images/sections/aunctions/profile11.png",
+          "../images/sections/aunctions/profile8.png",
+          "../images/sections/aunctions/profile10.png",
+        ],
     }
   - {
       id: "2",
@@ -19,6 +26,12 @@ liveAunctionList:
       poepleLikes: 120,
       liked: false,
       imgPath: "../images/sections/aunctions/live2.png",
+      profileCoverPathList:
+        [
+          "../images/sections/aunctions/profile4.png",
+          "../images/sections/aunctions/profile3.png",
+          "../images/sections/aunctions/profile9.png",
+        ],
     }
   - {
       id: "3",
@@ -29,6 +42,7 @@ liveAunctionList:
       poepleLikes: 570,
       liked: true,
       imgPath: "../images/sections/aunctions/live3.png",
+      profileCoverPathList: ["../images/sections/aunctions/profile7.png"],
     }
   - {
       id: "4",
@@ -39,6 +53,13 @@ liveAunctionList:
       poepleLikes: 98,
       liked: true,
       imgPath: "../images/sections/aunctions/live4.png",
+      profileCoverPathList:
+        [
+          "../images/sections/aunctions/profile6.png",
+          "../images/sections/aunctions/profile4.png",
+          "../images/sections/aunctions/profile15.png",
+          "../images/sections/aunctions/profile3.png",
+        ],
     }
   - {
       id: "5",
@@ -49,5 +70,12 @@ liveAunctionList:
       poepleLikes: 120,
       liked: true,
       imgPath: "../images/sections/aunctions/live5.png",
+      profileCoverPathList:
+        [
+          "../images/sections/aunctions/profile1.png",
+          "../images/sections/aunctions/profile12.png",
+          "../images/sections/aunctions/profile2.png",
+          "../images/sections/aunctions/profile8.png",
+        ],
     }
 ---

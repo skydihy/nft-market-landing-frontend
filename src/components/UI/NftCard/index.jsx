@@ -7,7 +7,12 @@ import TimerIcon from "assets/svg/timer.svg";
 
 import * as styles from "styles/ui/NftCard.module.scss";
 
-const NftCard = ({ width = "fit-content", padding = 0, nft }) => {
+const NftCard = ({
+  width = "fit-content",
+  padding = 0,
+  nft,
+  showProfile = false,
+}) => {
   const {
     name,
     prices,
@@ -16,6 +21,7 @@ const NftCard = ({ width = "fit-content", padding = 0, nft }) => {
     poepleLikes,
     liked,
     imgPath,
+    profileCoverPathList,
   } = nft;
 
   const imageOptimized = getImage(imgPath);
@@ -46,6 +52,24 @@ const NftCard = ({ width = "fit-content", padding = 0, nft }) => {
         </p>
       </div>
       <div className={styles.binding}>
+        {showProfile && profileCoverPathList ? (
+          <div style={{ marginLeft: "16px" }}>
+            {profileCoverPathList.map((path, idx) => (
+              <div
+                key={idx}
+                style={{
+                  display: "inline-block",
+                  borderRadius: "50%",
+                  border: "4px solid #FFF",
+                  marginLeft: "-16px",
+                }}
+              >
+                <GatsbyImage image={getImage(path)} alt="profile" />
+              </div>
+            ))}
+          </div>
+        ) : null}
+
         <div>
           <p>
             {parseInt(peopleBinding)}

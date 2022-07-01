@@ -1,5 +1,5 @@
 .cardImageWrapper {
-  @apply relative;
+  @apply relative w-full;
 
   div,
   img {
@@ -11,14 +11,14 @@
 
     z-index: -1;
     top: 40px;
-    opacity: 0.35;
+    opacity: 0.32;
     filter: blur(35px);
     border-radius: 20px;
   }
 }
 
 .cardDescriptionNPricing {
-  @apply flex flex-row mt-6;
+  @apply flex flex-row mt-6 w-full;
 
   .name {
     @apply flex w-auto font-sans font-semibold text-dark-100;

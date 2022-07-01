@@ -2,12 +2,13 @@
   @apply pt-16;
 
   .aunctionContainer {
-    @apply flex flex-col w-full items-center;
+    @apply flex flex-col w-full items-center mx-auto overflow-x-hidden;
+
+    max-width: 2400px;
 
     .aunctionHorizontal {
-      @apply flex flex-row;
+      @apply flex flex-row w-full justify-center;
 
-      gap: 24px;
       margin-top: 72px;
     }
   }
