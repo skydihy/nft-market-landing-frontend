@@ -22,7 +22,6 @@
 
       z-index: 4;
       max-height: 860px;
-      filter: blur(250px);
     }
 
     .littleCircles {
@@ -202,8 +201,11 @@
     .heroContainer {
       .heroTitle {
         font-size: 2.4rem;
+        margin-top: 1.2rem;
 
         .firstRow {
+          transform: translateX(-24px);
+
           span {
             @apply mb-0;
 
@@ -214,6 +216,8 @@
           }
         }
         .ndRow {
+          transform: translateX(16px);
+
           span {
             @apply mb-0;
 
@@ -225,7 +229,16 @@
         }
       }
 
+      .subTitleBottom {
+        margin-top: 1.2rem;
+      }
+
       .inputContainer {
+        @apply shadow-inputBoxShadow;
+
+        background: #ffffff;
+        border-radius: 16px;
+
         input::placeholder {
           @apply text-white opacity-0;
         }
@@ -250,17 +263,6 @@
       .heroTitle {
         font-size: 2.4rem;
         margin-top: 1.2rem;
-
-        .firstRow {
-          transform: translateX(-16px);
-        }
-        .ndRow {
-          transform: translateX(16px);
-        }
-      }
-
-      .subTitleBottom {
-        margin-top: 1.5rem;
       }
 
       .inputContainer {

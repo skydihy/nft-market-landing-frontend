@@ -4,6 +4,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      boxShadow: {
+        inputBoxShadow: "0px 25px 75px rgba(6, 7, 20, 0.1)",
+      },
       opacity: {
         10: ".1",
       },

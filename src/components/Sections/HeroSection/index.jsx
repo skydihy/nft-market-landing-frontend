@@ -73,6 +73,10 @@ const HeroSection = () => {
         </p>
         <p className={styles.subTitleBottom}>Discover, collect and sell</p>
         <div className={styles.inputContainer}>
+          <input
+            placeholder="Items, collections and creators"
+            autoComplete="off"
+          />
           <div className={styles.selector} ref={searchFieldRef}>
             <div
               className={styles.placeholder}
@@ -97,10 +101,6 @@ const HeroSection = () => {
             )}
           </div>
           <SearchIcon className={styles.btnSearch} />
-          <input
-            placeholder="Items, collections and creators"
-            autoComplete="off"
-          />
         </div>
       </div>
     </div>

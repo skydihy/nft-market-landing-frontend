@@ -18,12 +18,7 @@ const LiveAunctionSection = () => {
               id
               imgPath {
                 childImageSharp {
-                  gatsbyImageData(
-                    width: 400
-                    placeholder: TRACED_SVG
-                    formats: [AUTO, WEBP, AVIF]
-                    quality: 90
-                  )
+                  gatsbyImageData(width: 400, quality: 85)
                 }
               }
               name
@@ -34,12 +29,7 @@ const LiveAunctionSection = () => {
               remainingTimes
               profileCoverPathList {
                 childImageSharp {
-                  gatsbyImageData(
-                    width: 32
-                    placeholder: TRACED_SVG
-                    formats: [AUTO, WEBP, AVIF]
-                    quality: 90
-                  )
+                  gatsbyImageData(width: 32, quality: 75)
                 }
               }
             }
@@ -74,31 +64,33 @@ const LiveAunctionSection = () => {
 
   React.useEffect(() => {
     if (aunctionRef) {
-      setPerView(+(aunctionRef.current?.offsetWidth / 412));
-      window.addEventListener("resize", () =>
-        setPerView(+(aunctionRef.current?.offsetWidth / 412))
-      );
+      if (aunctionRef.current?.offsetWidth < 768) {
+        setPerView(+(aunctionRef.current?.offsetWidth / 240));
+      } else {
+        setPerView(+(aunctionRef.current?.offsetWidth / 400));
+      }
+      window.addEventListener("resize", () => {
+        if (aunctionRef.current?.offsetWidth < 768) {
+          setPerView(+(aunctionRef.current?.offsetWidth / 240));
+        } else {
+          setPerView(+(aunctionRef.current?.offsetWidth / 400));
+        }
+      });
     }
   }, [aunctionRef]);
 
   const memorizedAunctionList = React.useMemo(() => {
     return LIVE_AUNCTION_LIST.map((item) => (
       <SwiperSlide key={item.id}>
-        <NftCard
-          key={item.id}
-          width={448}
-          padding={24}
-          nft={item}
-          showProfile
-        />
+        <NftCard key={item.id} padding={24} nft={item} showProfile />
       </SwiperSlide>
     ));
-  }, [LiveAunctionSection]);
+  }, [LIVE_AUNCTION_LIST]);
 
   return (
     <div className={styles.aunctionPageWrapper}>
       <div className={styles.aunctionContainer}>
-        <h4>Latest live auctions</h4>
+        <h4 className="mobile:text-[1.25rem]">Latest live auctions</h4>
         <div className={styles.aunctionHorizontal} ref={aunctionRef}>
           <Swiper {...swiperConfigs}>{memorizedAunctionList}</Swiper>
         </div>

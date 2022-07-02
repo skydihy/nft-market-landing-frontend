@@ -18,7 +18,9 @@
 }
 
 .cardDescriptionNPricing {
-  @apply flex flex-row mt-6 w-full;
+  @apply flex flex-row mt-6 w-full gap-2;
+
+  height: 50px;
 
   .name {
     @apply flex w-auto font-sans font-semibold text-dark-100;
@@ -43,4 +45,20 @@
   font-size: 0.875rem;
   padding-top: 20px;
   border-top: 1px solid #e2e2ed;
+}
+
+@screen mobile {
+  .cardDescriptionNPricing {
+    @apply flex flex-col justify-between;
+
+    height: 132px;
+
+    .prices {
+      @apply w-full flex flex-row justify-center;
+    }
+  }
+
+  .bidding {
+    @apply flex-col w-full;
+  }
 }
