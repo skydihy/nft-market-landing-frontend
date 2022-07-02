@@ -18,14 +18,14 @@
       }
 
       h2 {
-        @apply text-dark-100 mt-4;
+        @apply text-dark-100 mt-4 font-sora;
 
         font-size: 3rem;
         line-height: 115%;
       }
 
       p {
-        @apply text-grey-100 mt-1;
+        @apply text-grey-100 mt-1 font-inter;
 
         letter-spacing: 0.2px;
       }
