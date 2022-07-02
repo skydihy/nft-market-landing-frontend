@@ -1,0 +1,50 @@
+.pageWrapper {
+  padding-top: 100px;
+
+  .overlineContainer {
+    @apply mx-auto flex flex-row justify-between items-center;
+
+    max-width: 1392px;
+    width: 80%;
+    gap: 118px;
+
+    .leftBox {
+      @apply flex flex-col w-full;
+
+      max-width: 590px;
+
+      .topDescription {
+        @apply font-inter uppercase text-grey-50;
+
+        letter-spacing: 3px;
+      }
+      .headingDescription {
+        @apply font-sora mt-4 text-dark-100;
+
+        font-size: 4rem;
+        line-height: 1;
+      }
+      .bottomDescription {
+        @apply font-inter mt-8 text-grey-100;
+      }
+    }
+
+    .rightBox {
+      @apply relative w-full;
+    }
+  }
+}
+
+@screen mobile {
+  .pageWrapper .overlineContainer {
+    @apply flex-col;
+
+    gap: 80px;
+
+    .leftBox {
+      .headingDescription {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
