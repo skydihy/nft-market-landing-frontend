@@ -7,6 +7,7 @@ import BucketOverlineSection from "../components/Sections/BucketOverlineSection"
 import LiveAunctionSection from "components/Sections/LiveAunctionSection";
 import YellowOverlineSection from "../components/Sections/YellowOverlineSection";
 import ArtworksSection from "../components/Sections/ArtworksSection";
+import FolderSection from "../components/Sections/FolderSection";
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <BucketOverlineSection />
       <YellowOverlineSection />
       <ArtworksSection />
+      <FolderSection />
     </Layout>
   );
 };
