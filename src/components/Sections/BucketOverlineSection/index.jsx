@@ -20,14 +20,13 @@ const BucketOverlineSection = () => {
             Ut amet vulputate faucibus vitae semper eget auctor. Diam tempor
             pulvinar ultricies dolor feugiat aliquam commodo.
           </p>
-          <div className="flex flex-row gap-4 mt-12 mobile:justify-center mobile:flex-col">
+          <div className="flex flex-row gap-4 mt-12 smobile:justify-center smobile:flex-col">
             <PrimaryButton title="Get started" />
             <SecondaryButton title="Learn more" />
           </div>
         </div>
         <div className={styles.rightBox}>
           <StaticImage
-            className={styles.imageWrapper}
             src="../../../images/sections/bucket-overline/bucket.png"
             alt="Bucket"
             objectFit="contain"

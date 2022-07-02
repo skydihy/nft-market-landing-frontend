@@ -17,7 +17,6 @@ const YellowOverlineSection = () => {
       <div className={styles.overlineContainer}>
         <div className={styles.leftBox}>
           <StaticImage
-            className={styles.imageWrapper}
             src="../../../images/sections/yellow-overline/yellow.png"
             alt="Yellow ball looking at the paper rocket"
             objectFit="contain"
@@ -45,7 +44,7 @@ const YellowOverlineSection = () => {
               <p>Cursus fermentum</p>
             </div>
           </div>
-          <div className="flex flex-row gap-4 mt-12 mobile:justify-center mobile:flex-col">
+          <div className="flex flex-row gap-4 mt-12 smobile:justify-center smobile:flex-col">
             <PrimaryButton title="Get started" />
             <SecondaryButton title="Learn more" />
           </div>

@@ -64,13 +64,13 @@ const LiveAunctionSection = () => {
 
   React.useEffect(() => {
     if (aunctionRef) {
-      if (aunctionRef.current?.offsetWidth < 768) {
+      if (aunctionRef.current?.offsetWidth <= 768) {
         setPerView(+(aunctionRef.current?.offsetWidth / 240));
       } else {
         setPerView(+(aunctionRef.current?.offsetWidth / 400));
       }
       window.addEventListener("resize", () => {
-        if (aunctionRef.current?.offsetWidth < 768) {
+        if (aunctionRef.current?.offsetWidth <= 768) {
           setPerView(+(aunctionRef.current?.offsetWidth / 240));
         } else {
           setPerView(+(aunctionRef.current?.offsetWidth / 400));
