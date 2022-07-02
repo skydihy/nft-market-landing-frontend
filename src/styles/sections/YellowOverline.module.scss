@@ -1,0 +1,82 @@
+.pageWrapper {
+  padding-top: 150px;
+
+  .overlineContainer {
+    @apply mx-auto flex flex-row justify-between items-center;
+
+    max-width: 1392px;
+    width: 80%;
+    gap: 118px;
+
+    .leftBox {
+      @apply relative w-full;
+    }
+
+    .rightBox {
+      @apply flex flex-col w-full;
+
+      max-width: 590px;
+
+      .topDescription {
+        @apply font-inter uppercase text-grey-50;
+
+        letter-spacing: 3px;
+      }
+      .headingDescription {
+        @apply font-sora mt-4 text-dark-100;
+
+        font-size: 4rem;
+        line-height: 1;
+      }
+      .bottomDescription {
+        @apply font-inter mt-8 text-grey-100;
+      }
+
+      .services {
+        @apply flex flex-row gap-6;
+
+        margin-top: 56px;
+
+        .serviceItem {
+          h6 {
+            @apply font-sora text-dark-100 mt-6;
+
+            font-size: 1.25rem;
+          }
+          p {
+            @apply font-inter text-grey-100;
+
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@screen mobile {
+  .pageWrapper .overlineContainer {
+    @apply flex-col;
+
+    gap: 80px;
+
+    .rightBox {
+      .headingDescription {
+        font-size: 2.4rem;
+      }
+
+      .services {
+        @apply flex-col items-center;
+
+        .serviceItem {
+          @apply text-center;
+
+          svg {
+            @apply mx-auto;
+          }
+        }
+      }
+    }
+  }
+}

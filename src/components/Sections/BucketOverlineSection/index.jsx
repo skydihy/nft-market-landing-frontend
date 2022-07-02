@@ -5,9 +5,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import PrimaryButton from "../../UI/Buttons/PrimaryButton";
 import SecondaryButton from "../../UI/Buttons/SecondaryButton";
 
-import * as styles from "styles/sections/Overline.module.scss";
+import * as styles from "styles/sections/BucketOverline.module.scss";
 
-const OverlineSection = () => {
+const BucketOverlineSection = () => {
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.overlineContainer}>
@@ -20,7 +20,7 @@ const OverlineSection = () => {
             Ut amet vulputate faucibus vitae semper eget auctor. Diam tempor
             pulvinar ultricies dolor feugiat aliquam commodo.
           </p>
-          <div className="flex flex-row gap-4 mt-12 mobile:justify-center">
+          <div className="flex flex-row gap-4 mt-12 mobile:justify-center mobile:flex-col">
             <PrimaryButton title="Get started" />
             <SecondaryButton title="Learn more" />
           </div>
@@ -28,10 +28,10 @@ const OverlineSection = () => {
         <div className={styles.rightBox}>
           <StaticImage
             className={styles.imageWrapper}
-            src="../../../images/sections/overline/bucket.png"
+            src="../../../images/sections/bucket-overline/bucket.png"
             alt="Bucket"
             objectFit="contain"
-            quality={90}
+            quality={80}
           />
         </div>
       </div>
@@ -39,4 +39,4 @@ const OverlineSection = () => {
   );
 };
 
-export default OverlineSection;
+export default BucketOverlineSection;
