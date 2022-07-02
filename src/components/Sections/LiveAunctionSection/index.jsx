@@ -74,9 +74,9 @@ const LiveAunctionSection = () => {
 
   React.useEffect(() => {
     if (aunctionRef) {
-      setPerView(parseInt(aunctionRef.current?.offsetWidth / 400));
+      setPerView(+(aunctionRef.current?.offsetWidth / 412));
       window.addEventListener("resize", () =>
-        setPerView(parseInt(aunctionRef.current?.offsetWidth / 400))
+        setPerView(+(aunctionRef.current?.offsetWidth / 412))
       );
     }
   }, [aunctionRef]);
