@@ -13,3 +13,21 @@
     }
   }
 }
+
+@media screen and (min-width: 2400px) {
+  .aunctionContainer {
+    mask-image: linear-gradient(
+      transparent,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+}
