@@ -1,0 +1,138 @@
+footer {
+  padding: 70px 0 100px 0;
+
+  .footerContainer {
+    @apply w-full mx-auto flex flex-row;
+
+    max-width: 1392px;
+    width: 80%;
+
+    .leftContent,
+    .middleContent,
+    .rightContent {
+      @apply w-full;
+
+      max-width: 465px;
+      padding: 48px;
+    }
+
+    .leftContent {
+      @apply flex flex-col justify-between;
+
+      border: 1px solid #e2e2ed;
+      border-radius: 20px 0px 0px 20px;
+
+      .about {
+        @apply flex flex-row gap-10 text-grey-100 flex-wrap;
+
+        font-size: 0.875rem;
+        letter-spacing: 0.2px;
+
+        li {
+          @apply cursor-pointer;
+        }
+      }
+    }
+
+    .middleContent {
+      border: 1px solid #e2e2ed;
+
+      .external {
+        @apply flex flex-col font-sora text-dark-100 font-semibold gap-4;
+
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+
+        li {
+          @apply cursor-pointer;
+        }
+      }
+
+      .socials {
+        @apply flex flex-row gap-6;
+
+        margin-top: 69px;
+
+        svg {
+          @apply cursor-pointer;
+        }
+      }
+
+      .buttonAccount {
+        @apply mt-10 w-fit;
+      }
+    }
+
+    .rightContent {
+      @apply flex flex-col justify-between;
+
+      border: 1px solid #e2e2ed;
+      border-radius: 0px 20px 20px 0px;
+      .inputContainer {
+        @apply relative flex items-center w-full;
+
+        input {
+          @apply w-full;
+
+          padding-right: 106px;
+          height: 52px !important;
+          box-shadow: 0px 25px 75px rgba(6, 7, 20, 0.1);
+        }
+
+        span {
+          @apply cursor-pointer absolute right-6 text-purple-dark  font-sora font-semibold;
+
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@screen ipad {
+  footer .footerContainer {
+    @apply flex-col;
+
+    .leftContent,
+    .middleContent,
+    .rightContent {
+      @apply mx-auto;
+    }
+
+    .leftContent {
+      border-radius: 20px 20px 0px 0px;
+
+      .about {
+        @apply mt-4 justify-center gap-4;
+      }
+    }
+
+    .middleContent {
+      .external {
+        @apply flex flex-row gap-6 flex-wrap justify-center;
+
+        li {
+          @apply w-fit;
+        }
+      }
+
+      .buttonAccount {
+        @apply w-full;
+
+        div {
+          @apply w-fit mx-auto;
+        }
+      }
+
+      .socials {
+        @apply justify-center;
+      }
+    }
+
+    .rightContent {
+      @apply gap-6;
+
+      border-radius: 0px 0px 20px 20px;
+    }
+  }
+}
