@@ -39,7 +39,7 @@ const LiveAunctionSection = () => {
     }
   `);
 
-  const LIVE_AUNCTION_LIST =
+  const liveAunctionlistResponse =
     data.allMarkdownRemark.nodes[0].frontmatter.liveAunctionList;
 
   const aunctionRef = React.useRef(null);
@@ -80,12 +80,12 @@ const LiveAunctionSection = () => {
   }, [aunctionRef]);
 
   const memorizedAunctionList = React.useMemo(() => {
-    return LIVE_AUNCTION_LIST.map((item) => (
+    return liveAunctionlistResponse.map((item) => (
       <SwiperSlide key={item.id}>
         <NftCard key={item.id} padding={24} nft={item} showProfile />
       </SwiperSlide>
     ));
-  }, [LIVE_AUNCTION_LIST]);
+  }, [liveAunctionlistResponse]);
 
   return (
     <div className={styles.aunctionPageWrapper}>

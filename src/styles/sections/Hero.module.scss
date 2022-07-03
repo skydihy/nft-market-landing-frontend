@@ -244,12 +244,16 @@
         }
 
         .selector {
-          @apply w-max;
+          width: 110px;
 
           left: 50%;
 
           .placeholder {
             @apply pr-8;
+          }
+
+          .selectorItemList {
+            @apply w-max;
           }
         }
       }
@@ -267,8 +271,6 @@
 
       .inputContainer {
         .selector {
-          @apply w-max;
-
           left: 40%;
 
           .placeholder {

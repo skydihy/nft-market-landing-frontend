@@ -1,0 +1,62 @@
+.cardImageWrapper {
+  @apply relative w-full;
+
+  width: 212px;
+
+  div,
+  img {
+    border-radius: 20px;
+  }
+
+  .imageShadow {
+    @apply absolute inset-0;
+
+    z-index: -1;
+    top: 40px;
+    opacity: 0.32;
+    filter: blur(35px);
+    border-radius: 20px;
+  }
+}
+
+.cardDescriptionNPricing {
+  @apply flex flex-col mt-6 w-full justify-between;
+
+  height: 124px;
+
+  .name {
+    @apply flex w-auto font-sans font-semibold text-dark-100;
+
+    font-size: 1.25rem;
+    line-height: 25px;
+    letter-spacing: 0px;
+  }
+
+  .prices {
+    @apply font-sora w-fit font-semibold flex flex-row items-center text-purple-dark bg-purple-dark/10;
+
+    min-width: 97px;
+    padding: 8px 14px;
+    border-radius: 4px;
+  }
+}
+
+.bidding {
+  @apply mt-7 flex flex-row justify-between items-center text-grey-100;
+
+  font-size: 0.875rem;
+  padding-top: 20px;
+  border-top: 1px solid #e2e2ed;
+}
+
+@screen mobile {
+  .cardDescriptionNPricing {
+    @apply mt-4;
+
+    height: 108px;
+
+    .prices {
+      @apply w-full flex justify-center;
+    }
+  }
+}

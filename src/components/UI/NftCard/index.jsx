@@ -83,13 +83,13 @@ const NftCard = ({
                 : ""
             }`}
           >
-            {parseInt(peopleBidding)}
+            {peopleBidding.toLocaleString()}
             <span className="ml-[4px]">people are bidding</span>
           </p>
         </div>
         <div className="flex gap-2 mobile:mt-2">
           {liked ? <LikedIcon /> : <LikeIcon />}
-          <p>{parseInt(poepleLikes)}</p>
+          <p>{poepleLikes.toLocaleString()}</p>
         </div>
       </div>
     </div>

@@ -83,7 +83,11 @@ const HeroSection = () => {
               onClick={() => setShowSelector((prev) => !prev)}
             >
               {currentCategory ? (
-                <span className="text-dark-90">{currentCategory}</span>
+                <span className="text-dark-90">
+                  {currentCategory.length <= 6
+                    ? currentCategory
+                    : currentCategory.slice(0, 8) + ".."}
+                </span>
               ) : (
                 <span className="text-dark-90">Category</span>
               )}
@@ -92,11 +96,14 @@ const HeroSection = () => {
 
             {showSelector && (
               <ul className={styles.selectorItemList}>
-                <li onClick={() => handleSearchField("Abstract")}>Abstract</li>
-                <li onClick={() => handleSearchField("Paints")}>Paints</li>
-                <li onClick={() => handleSearchField("Portraits")}>
-                  Portraits
+                <li onClick={() => handleSearchField("Architecture")}>
+                  Architecture
                 </li>
+                <li onClick={() => handleSearchField("Photography")}>
+                  Photography
+                </li>
+                <li onClick={() => handleSearchField("Games")}>Games</li>
+                <li onClick={() => handleSearchField("Music")}>Music</li>
               </ul>
             )}
           </div>

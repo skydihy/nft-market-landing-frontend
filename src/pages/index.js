@@ -8,6 +8,7 @@ import LiveAunctionSection from "components/Sections/LiveAunctionSection";
 import YellowOverlineSection from "../components/Sections/YellowOverlineSection";
 import ArtworksSection from "../components/Sections/ArtworksSection";
 import FolderSection from "../components/Sections/FolderSection";
+import PopularSection from "../components/Sections/PopularSection";
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <LiveAunctionSection />
       <BucketOverlineSection />
       <YellowOverlineSection />
+      <PopularSection />
       <ArtworksSection />
       <FolderSection />
     </Layout>
