@@ -64,7 +64,7 @@ footer {
     }
 
     .rightContent {
-      @apply flex flex-col justify-between;
+      @apply flex flex-col justify-between text-grey-100;
 
       border: 1px solid #e2e2ed;
       border-radius: 0px 20px 20px 0px;
