@@ -3,7 +3,6 @@ import * as React from "react";
 // Components
 import PrimaryButton from "../UI/Buttons/PrimaryButton";
 import SecondaryButton from "../UI/Buttons/SecondaryButton";
-import ThemeToggle from "./ThemeToggle";
 
 // Assets
 import NftMarketLogo from "assets/svg/nft-market-logo.svg";

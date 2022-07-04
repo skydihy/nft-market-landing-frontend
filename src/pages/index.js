@@ -10,6 +10,7 @@ import ArtworksSection from "../components/Sections/ArtworksSection";
 import FolderSection from "../components/Sections/FolderSection";
 import PopularSection from "../components/Sections/PopularSection";
 import EthScrolling from "../components/Sections/EthScrolling";
+import TripleSection from "../components/Sections/TripleSection";
 
 const IndexPage = () => {
   return (
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <HeroSection />
       <LiveAunctionSection />
       <BucketOverlineSection />
+      <TripleSection />
       <YellowOverlineSection />
       <PopularSection />
       <ArtworksSection />

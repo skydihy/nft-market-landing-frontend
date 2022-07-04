@@ -7,6 +7,11 @@
   box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
     inset 4px 4px 4px rgba(255, 255, 255, 0.1);
   border-radius: 12px;
+
+  &:hover {
+    opacity: 0.9;
+    transition: all 0.4s;
+  }
 }
 
 .primaryDisabled {

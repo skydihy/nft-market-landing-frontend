@@ -1,4 +1,5 @@
 ---
+title: "liveAunctionList"
 liveAunctionList:
   - {
       id: "1",

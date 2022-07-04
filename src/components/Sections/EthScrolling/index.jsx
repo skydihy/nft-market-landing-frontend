@@ -10,7 +10,7 @@ import { Autoplay } from "swiper";
 const EthScrolling = () => {
   const data = useStaticQuery(graphql`
     query itemListQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { frontmatter: { title: { eq: "ethList" } } }) {
         nodes {
           frontmatter {
             ethList {
@@ -28,7 +28,7 @@ const EthScrolling = () => {
     }
   `);
 
-  const itemListResponse = data.allMarkdownRemark.nodes[2].frontmatter.ethList;
+  const itemListResponse = data.allMarkdownRemark.nodes[0].frontmatter.ethList;
 
   const itemRef = React.useRef(null);
 

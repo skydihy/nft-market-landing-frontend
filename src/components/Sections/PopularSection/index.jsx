@@ -10,7 +10,9 @@ import * as styles from "styles/sections/Popular.module.scss";
 const PopularSection = () => {
   const data = useStaticQuery(graphql`
     query popularQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { title: { eq: "popularList" } } }
+      ) {
         nodes {
           frontmatter {
             popularList {
@@ -33,7 +35,7 @@ const PopularSection = () => {
   `);
 
   const popularListResponse =
-    data.allMarkdownRemark.nodes[1].frontmatter.popularList;
+    data.allMarkdownRemark.nodes[0].frontmatter.popularList;
 
   const [currentCategory, setCurrentCategory] = React.useState("Photography");
 

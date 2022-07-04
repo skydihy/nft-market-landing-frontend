@@ -11,7 +11,9 @@ import * as styles from "styles/sections/LiveAunction.module.scss";
 const LiveAunctionSection = () => {
   const data = useStaticQuery(graphql`
     query liveAunctionQuery {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { title: { eq: "liveAunctionList" } } }
+      ) {
         nodes {
           frontmatter {
             liveAunctionList {

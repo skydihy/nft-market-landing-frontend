@@ -5,6 +5,11 @@
   font-size: 1rem;
   border: 2px solid #7780a1;
   border-radius: 12px;
+
+  &:hover {
+    opacity: 0.9;
+    transition: 0.4s;
+  }
 }
 
 .secondaryDisabled {
