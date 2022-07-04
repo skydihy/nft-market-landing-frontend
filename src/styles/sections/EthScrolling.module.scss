@@ -5,7 +5,18 @@
     @apply flex flex-row mx-auto justify-center cursor-default;
 
     max-width: 2400px;
-    padding-top: 150px;
+
+    > div {
+      @apply pt-[150px] pb-[70px];
+    }
+
+    .blurImage {
+      @apply absolute top-[14px];
+
+      opacity: 0.35;
+      filter: blur(50px);
+      border-radius: 20px;
+    }
   }
 }
 

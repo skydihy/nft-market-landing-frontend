@@ -66,8 +66,12 @@ const EthScrolling = () => {
         <Swiper {...swiperConfigs} ref={itemRef}>
           {itemListResponse.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="flex flex-col items-center">
+              <div className="relative flex flex-col items-center">
                 <GatsbyImage image={getImage(item.imgPath)} />
+                <GatsbyImage
+                  className={styles.blurImage}
+                  image={getImage(item.imgPath)}
+                />
                 <p className="mt-2 text-grey-100 font-inter">
                   {item.prices}
                   <span className="ml-2">ETH</span>
