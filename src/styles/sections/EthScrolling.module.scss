@@ -1,0 +1,28 @@
+.pageWrapper {
+  @apply w-full;
+
+  .scrollingContainer {
+    @apply flex flex-row mx-auto justify-center cursor-default;
+
+    max-width: 2400px;
+    padding-top: 150px;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .pageWrapper .scrollingContainer {
+    mask-image: linear-gradient(
+      transparent,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent 100%
+    );
+  }
+}

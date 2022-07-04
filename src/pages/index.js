@@ -9,6 +9,7 @@ import YellowOverlineSection from "../components/Sections/YellowOverlineSection"
 import ArtworksSection from "../components/Sections/ArtworksSection";
 import FolderSection from "../components/Sections/FolderSection";
 import PopularSection from "../components/Sections/PopularSection";
+import EthScrolling from "../components/Sections/EthScrolling";
 
 const IndexPage = () => {
   return (
@@ -20,6 +21,7 @@ const IndexPage = () => {
       <PopularSection />
       <ArtworksSection />
       <FolderSection />
+      <EthScrolling />
     </Layout>
   );
 };
