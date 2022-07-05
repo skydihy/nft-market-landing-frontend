@@ -46,3 +46,15 @@
     }
   }
 }
+
+@screen ipad {
+  .pageWrapper .popularContainer .popularList {
+    gap: 8px;
+  }
+}
+
+@screen mobile {
+  .pageWrapper .popularContainer .popularList {
+    gap: 24px;
+  }
+}

@@ -78,6 +78,25 @@
   }
 }
 
+@media screen and (max-width: 1382px) {
+  .pageWrapper {
+    .tripleContainer {
+      gap: 24px;
+
+      .leftContainer {
+        order: 1;
+        height: 841px !important;
+      }
+      .middleContainer {
+        order: 3;
+      }
+      .rightContainer {
+        order: 2;
+      }
+    }
+  }
+}
+
 @screen ipad {
   .pageWrapper .tripleContainer {
     .leftContainer,
@@ -89,6 +108,7 @@
 
 @screen mobile {
   .pageWrapper .tripleContainer .middleContainer {
+    max-width: 448px;
     width: 100%;
   }
 }

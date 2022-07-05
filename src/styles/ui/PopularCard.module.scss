@@ -9,7 +9,7 @@
   }
 
   .imageShadow {
-    @apply absolute inset-0;
+    @apply absolute inset-0 w-full;
 
     z-index: -1;
     top: 40px;
@@ -47,6 +47,12 @@
   font-size: 0.875rem;
   padding-top: 20px;
   border-top: 1px solid #e2e2ed;
+}
+
+@screen ipad {
+  .cardImageWrapper {
+    @apply w-full;
+  }
 }
 
 @screen mobile {
