@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import PrimaryButton from "../../UI/Buttons/PrimaryButton";
 import SecondaryButton from "../../UI/Buttons/SecondaryButton";
 import HotCard from "../../sections/TripleSection/HotCard";
+import RankCard from "./RankCard";
 
 import * as styles from "styles/sections/Triple.module.scss";
 
@@ -45,7 +46,7 @@ const TripleSection = () => {
             liked
             imgPath {
               childImageSharp {
-                gatsbyImageData(width: 212, quality: 80)
+                gatsbyImageData(width: 120, quality: 80)
               }
             }
           }
@@ -58,6 +59,10 @@ const TripleSection = () => {
 
   const hotItemListResponse = data.getHotList.frontmatter.hotsaleList;
   const rankListItemResponse = data.getRankList.frontmatter.rankList;
+  console.log(
+    "🚀 ~ file: index.jsx ~ line 61 ~ TripleSection ~ rankListItemResponse",
+    rankListItemResponse
+  );
 
   const [perView, setPerView] = React.useState(0);
 
@@ -133,6 +138,10 @@ const TripleSection = () => {
 
         <div className={styles.rightContainer}>
           <h5>Top NFT at a lower price</h5>
+          {rankListItemResponse.map((item) => (
+            <RankCard key={item.id} nft={item} />
+          ))}
+
           <div className="mt-16">
             <SecondaryButton title="Show me more" />
           </div>

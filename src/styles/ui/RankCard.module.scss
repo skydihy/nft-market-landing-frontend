@@ -1,0 +1,46 @@
+.cardImageWrapper {
+  @apply relative w-full;
+
+  width: 212px;
+
+  div,
+  img {
+    border-radius: 20px;
+  }
+
+  .imageShadow {
+    @apply absolute inset-0;
+
+    z-index: -1;
+    top: 40px;
+    opacity: 0.32;
+    filter: blur(35px);
+    border-radius: 20px;
+  }
+}
+
+.cardDescriptionNPricing {
+  @apply flex flex-col  w-full justify-start;
+
+  .name {
+    @apply flex w-auto font-sans font-semibold text-dark-100;
+
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+
+  .prices {
+    @apply font-sora w-fit font-semibold flex flex-row items-center text-purple-dark  bg-purple-dark/10;
+
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+  }
+
+  .bidding {
+    @apply flex flex-row justify-between items-center text-grey-100 mt-auto;
+
+    font-size: 0.875rem;
+  }
+}

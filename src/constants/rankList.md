@@ -7,7 +7,7 @@ rankList:
       prices: "1.89",
       remainingTimes: "21:15",
       peopleBidding: 192,
-      liked: false,
+      liked: true,
       imgPath: "../images/sections/triple/rankItem1.png",
     }
   - {
@@ -34,7 +34,7 @@ rankList:
       prices: "1.25",
       remainingTimes: "33:42",
       peopleBidding: 98,
-      liked: false,
+      liked: true,
       imgPath: "../images/sections/triple/rankItem4.png",
     }
 ---
