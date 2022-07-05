@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 // Components
 import SecondaryButton from "components/UI/Buttons/SecondaryButton";
-import PopularCard from "../../UI/PopularCard";
+import PopularCard from "../../sections/PopularSection/PopularCard";
 
 import * as styles from "styles/sections/Popular.module.scss";
 

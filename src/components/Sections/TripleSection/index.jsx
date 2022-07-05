@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby";
 // Components
 import PrimaryButton from "../../UI/Buttons/PrimaryButton";
 import SecondaryButton from "../../UI/Buttons/SecondaryButton";
-import HotCard from "../../UI/HotCard";
+import HotCard from "../../sections/TripleSection/HotCard";
 
 import * as styles from "styles/sections/Triple.module.scss";
 

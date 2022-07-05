@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 
 // Components
-import NftCard from "../../UI/NftCard";
+import NftCard from "../../sections/LiveAunctionSection/NftCard";
 
 import * as styles from "styles/sections/LiveAunction.module.scss";
 
