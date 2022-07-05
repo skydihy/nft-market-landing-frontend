@@ -55,44 +55,26 @@ const TripleSection = () => {
     }
   `);
 
-  const hotsaleRef = React.useRef(null);
-
   const hotItemListResponse = data.getHotList.frontmatter.hotsaleList;
   const rankListItemResponse = data.getRankList.frontmatter.rankList;
-  console.log(
-    "🚀 ~ file: index.jsx ~ line 61 ~ TripleSection ~ rankListItemResponse",
-    rankListItemResponse
-  );
-
-  const [perView, setPerView] = React.useState(0);
 
   const swiperConfigs = {
     direction: "horizontal",
     rebuildonupdate: "false",
     shouldswiperupdate: "false",
-    slidesPerView: perView,
+    slidesPerView: "auto",
     spaceBetween: 24,
   };
-
-  React.useEffect(() => {
-    if (hotsaleRef) {
-      setPerView(+(hotsaleRef.current?.offsetWidth / 212));
-
-      window.addEventListener("resize", () => {
-        setPerView(+(hotsaleRef.current?.offsetWidth / 212));
-      });
-    }
-  }, [hotsaleRef]);
 
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.tripleContainer}>
         <div className={styles.leftContainer}>
           <h5>Check out the hottest Sale offers</h5>
-          <div className="mt-2" ref={hotsaleRef}>
-            <Swiper {...swiperConfigs}>
+          <div className="mt-2">
+            <Swiper {...swiperConfigs} className="!pr-8">
               {hotItemListResponse.map((item) => (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide className="!w-[212px]" key={item.id}>
                   <HotCard nft={item} />
                 </SwiperSlide>
               ))}
