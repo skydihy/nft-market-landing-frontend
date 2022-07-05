@@ -9,30 +9,27 @@ import NftCard from "../../sections/LiveAunctionSection/NftCard";
 import * as styles from "styles/sections/LiveAunction.module.scss";
 
 const LiveAunctionSection = () => {
-  const data = useStaticQuery(graphql`
-    query liveAunctionQuery {
-      allMarkdownRemark(
-        filter: { frontmatter: { title: { eq: "liveAunctionList" } } }
-      ) {
-        nodes {
-          frontmatter {
-            liveAunctionList {
-              id
-              imgPath {
-                childImageSharp {
-                  gatsbyImageData(width: 400, quality: 85)
-                }
+  const { markdownRemark } = useStaticQuery(graphql`
+    query {
+      markdownRemark(frontmatter: { title: { eq: "liveAunctionList" } }) {
+        frontmatter {
+          title
+          liveAunctionList {
+            id
+            imgPath {
+              childImageSharp {
+                gatsbyImageData(width: 400, quality: 85)
               }
-              name
-              liked
-              peopleBidding
-              poepleLikes
-              prices
-              remainingTimes
-              profileCoverPathList {
-                childImageSharp {
-                  gatsbyImageData(width: 32, quality: 75)
-                }
+            }
+            name
+            liked
+            peopleBidding
+            poepleLikes
+            prices
+            remainingTimes
+            profileCoverPathList {
+              childImageSharp {
+                gatsbyImageData(width: 32, quality: 75)
               }
             }
           }
@@ -41,8 +38,7 @@ const LiveAunctionSection = () => {
     }
   `);
 
-  const liveAunctionlistResponse =
-    data.allMarkdownRemark.nodes[0].frontmatter.liveAunctionList;
+  const liveAunctionlistResponse = markdownRemark.frontmatter.liveAunctionList;
 
   const aunctionRef = React.useRef(null);
 

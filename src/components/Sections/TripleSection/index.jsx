@@ -13,23 +13,40 @@ import * as styles from "styles/sections/Triple.module.scss";
 const TripleSection = () => {
   const data = useStaticQuery(graphql`
     query tripleQuery {
-      allMarkdownRemark(
-        filter: { frontmatter: { title: { eq: "hotsaleList" } } }
+      getHotList: markdownRemark(
+        frontmatter: { title: { eq: "hotsaleList" } }
       ) {
-        nodes {
-          frontmatter {
-            hotsaleList {
-              id
-              imgPath {
-                childImageSharp {
-                  gatsbyImageData(width: 212, quality: 85)
-                }
+        frontmatter {
+          title
+          hotsaleList {
+            id
+            name
+            prices
+            remainingTimes
+            peopleBidding
+            liked
+            imgPath {
+              childImageSharp {
+                gatsbyImageData(width: 212, quality: 80)
               }
-              name
-              liked
-              peopleBidding
-              prices
-              remainingTimes
+            }
+          }
+        }
+      }
+      getRankList: markdownRemark(frontmatter: { title: { eq: "rankList" } }) {
+        frontmatter {
+          title
+          rankList {
+            id
+            name
+            prices
+            remainingTimes
+            peopleBidding
+            liked
+            imgPath {
+              childImageSharp {
+                gatsbyImageData(width: 212, quality: 80)
+              }
             }
           }
         }
@@ -39,8 +56,8 @@ const TripleSection = () => {
 
   const hotsaleRef = React.useRef(null);
 
-  const hotItemListResponse =
-    data.allMarkdownRemark.nodes[0].frontmatter.hotsaleList;
+  const hotItemListResponse = data.getHotList.frontmatter.hotsaleList;
+  const rankListItemResponse = data.getRankList.frontmatter.rankList;
 
   const [perView, setPerView] = React.useState(0);
 

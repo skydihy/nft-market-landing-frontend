@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: `Nft Market | Landing`,
+    title: `Nft Market - Landing`,
     siteUrl: `http://localhost:8000/`,
     description:
       "A new NFT experience | Non Fungible Tokens, Discover | collect and sell",
@@ -12,6 +12,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {

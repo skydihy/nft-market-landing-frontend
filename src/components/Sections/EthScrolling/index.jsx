@@ -8,18 +8,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 
 const EthScrolling = () => {
-  const data = useStaticQuery(graphql`
-    query itemListQuery {
-      allMarkdownRemark(filter: { frontmatter: { title: { eq: "ethList" } } }) {
-        nodes {
-          frontmatter {
-            ethList {
-              id
-              prices
-              imgPath {
-                childImageSharp {
-                  gatsbyImageData(width: 89, quality: 80)
-                }
+  const { markdownRemark } = useStaticQuery(graphql`
+    query {
+      markdownRemark(frontmatter: { title: { eq: "ethList" } }) {
+        frontmatter {
+          title
+          ethList {
+            id
+            prices
+            imgPath {
+              childImageSharp {
+                gatsbyImageData(width: 89, quality: 80)
               }
             }
           }
@@ -28,7 +27,7 @@ const EthScrolling = () => {
     }
   `);
 
-  const itemListResponse = data.allMarkdownRemark.nodes[0].frontmatter.ethList;
+  const itemListResponse = markdownRemark.frontmatter.ethList;
 
   const itemRef = React.useRef(null);
 

@@ -1,6 +1,7 @@
 import * as React from "react";
 
 // Components
+import Seo from "../components/Seo";
 import Layout from "components/Layout";
 import HeroSection from "components/Sections/HeroSection";
 import BucketOverlineSection from "../components/Sections/BucketOverlineSection";
@@ -14,17 +15,20 @@ import TripleSection from "../components/Sections/TripleSection";
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <HeroSection />
-      <LiveAunctionSection />
-      <BucketOverlineSection />
-      <TripleSection />
-      <YellowOverlineSection />
-      <PopularSection />
-      <ArtworksSection />
-      <FolderSection />
-      <EthScrolling />
-    </Layout>
+    <>
+      <Seo />
+      <Layout>
+        <HeroSection />
+        <LiveAunctionSection />
+        <BucketOverlineSection />
+        <TripleSection />
+        <YellowOverlineSection />
+        <PopularSection />
+        <ArtworksSection />
+        <FolderSection />
+        <EthScrolling />
+      </Layout>
+    </>
   );
 };
 
