@@ -1,3 +1,8 @@
+![desktop-screen](https://github.com/skydihy/assets/blob/main/landing/nft-market/images/macbook-screen.jpg)
+![desktop-screen2](https://github.com/skydihy/assets/blob/main/landing/nft-market/images/macbook-screen2.jpg)
+![ipad-screen](https://github.com/skydihy/assets/blob/main/landing/nft-market/images/ipad-screen.jpg)
+![mobile-screen](https://github.com/skydihy/assets/blob/main/landing/nft-market/images/mobile-screen.jpg)
+
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
