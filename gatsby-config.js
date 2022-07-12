@@ -10,7 +10,23 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `none`,
+          breakpoints: [460, 640, 768, 976, 1392],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     {
