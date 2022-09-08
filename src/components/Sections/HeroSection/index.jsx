@@ -10,19 +10,57 @@ import SearchIcon from "assets/svg/search.svg";
 
 import * as styles from "styles/sections/Hero.module.scss";
 
+const Category = {
+  ARCHITECTURE: "Architecture",
+  PHOTOGRAPHY: "Photography",
+  GAMES: "Games",
+  MUSIC: "Music",
+};
+
+const CategoryList = [
+  Category.ARCHITECTURE,
+  Category.PHOTOGRAPHY,
+  Category.GAMES,
+  Category.MUSIC,
+];
+
 const HeroSection = () => {
   const [showSelector, setShowSelector] = React.useState(false);
   const [currentCategory, setCurrentCategory] = React.useState(null);
+
+  const searchFieldRef = React.useRef(null);
 
   function handleSearchField(category) {
     setCurrentCategory(category);
     setShowSelector(false);
   }
 
-  const searchFieldRef = React.useRef(null);
+  function parseCategoryName(category, limitLength = 8) {
+    if (category.length < limitLength) return category;
+
+    return truncateString(category, limitLength);
+  }
+
+  function truncateString(text, limitLength) {
+    return text.slice(0, limitLength) + "..";
+  }
+
   useClickAway(searchFieldRef, () => {
     setShowSelector(false);
   });
+
+  const renderCategoryList = React.useMemo(
+    () => (
+      <ul className={styles.selectorItemList}>
+        {CategoryList.map((categoryName) => (
+          <li onClick={() => handleSearchField(categoryName)}>
+            {categoryName}
+          </li>
+        ))}
+      </ul>
+    ),
+    [CategoryList]
+  );
 
   return (
     <div className={styles.sectionWrapper}>
@@ -82,30 +120,20 @@ const HeroSection = () => {
               className={styles.placeholder}
               onClick={() => setShowSelector((prev) => !prev)}
             >
-              {currentCategory ? (
-                <span className="text-dark-90">
-                  {currentCategory.length <= 6
-                    ? currentCategory
-                    : currentCategory.slice(0, 8) + ".."}
-                </span>
-              ) : (
-                <span className="text-dark-90">Category</span>
+              {currentCategory && (
+                <label className="text-dark-90">
+                  {parseCategoryName(currentCategory)}
+                </label>
               )}
+
+              {!currentCategory && (
+                <label className="text-dark-90">Category</label>
+              )}
+
               <ArrowDown className={styles.arrowDown} />
             </div>
 
-            {showSelector && (
-              <ul className={styles.selectorItemList}>
-                <li onClick={() => handleSearchField("Architecture")}>
-                  Architecture
-                </li>
-                <li onClick={() => handleSearchField("Photography")}>
-                  Photography
-                </li>
-                <li onClick={() => handleSearchField("Games")}>Games</li>
-                <li onClick={() => handleSearchField("Music")}>Music</li>
-              </ul>
-            )}
+            {showSelector && renderCategoryList}
           </div>
           <SearchIcon className={styles.btnSearch} />
         </div>
