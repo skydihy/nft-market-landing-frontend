@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   siteMetadata: {
     title: `Nft Market - Landing`,
-    siteUrl: `http://localhost:8000/`,
+    siteUrl: `https://landing-nft-market.web.app/`,
     description:
       "A new NFT experience | Non Fungible Tokens, Discover | collect and sell",
   },

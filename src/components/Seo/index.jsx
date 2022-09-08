@@ -6,7 +6,7 @@ const DefaultSeo = {
   title: "Nft Market - Landing",
   description:
     "A new NFT experience | Non Fungible Tokens, Discover | collect and sell",
-  siteUrl: `http://localhost:8000/`,
+  siteUrl: `https://landing-nft-market.web.app/`,
 };
 
 const Seo = () => {
